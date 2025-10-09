@@ -1,0 +1,14 @@
+<!-- body.php -->
+
+<?php
+include</includes/hnav.php?
+
+
+?>
+
+section id="welcome")
+    <h1> welcome to my main page </h1>
+    </section>
+
+<section> 
+
