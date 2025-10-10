@@ -1,0 +1,10 @@
+<nav>
+    <header>
+      <ul>
+             <li><a href="./index.php">Home</a></li>
+                <li><a href="./about.php">About</a></li>
+                  <li><a href="./Contact.php">Contact</a></li>
+               <li><a href="https://tsc.edu"> TSC</a></li>
+    </header>
+      </ul>
+      </nav>
