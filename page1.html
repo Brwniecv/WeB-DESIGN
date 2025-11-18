@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Header 1 Page</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="site-title"><a href="index.html">Jquery</a></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Events</h2>
+    <p id="p1">hover me!</p>
+    <p id="p2">click me!</p> 
+    <p id="p3">double click me!</p> 
+    <p id="p4">leave me alone!</p> 
+    <p> Press [enter]</p>
+
+    <script>
+      $(document).ready(function() {
+      });
+        $("#p1").hover(function() {
+          $(this).hide();
+      });
+      $("#p2").click(function() {
+          $(this).hide();
+      });
+      $("#p3").dblclick(function() {
+          $(this).hide();
+      });
+      $("#p4").mouseout(function() {
+          $(this).hide();
+      });
+
+       var menuTrigger = false;
+    $(document).keypress(function(e){
+        if (e.which == 13) {
+            if (menuTrigger === false) {
+                $("nav").fadeIn(500);
+                menuTrigger = true;
+            }
+            else if (menuTrigger === true) {
+                $("nav").fadeOut(500);
+                menuTrigger = false;
+            }
+        }
+    }); 
+    
+    
+    </script>
+
+    
+
+    <!-- Example: You can write or test code here -->
+    <pre><code>
+// Example JavaScript
+console.log("Header 1 page loaded!");
+    </code></pre>
+
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+  </div>
+</body>
+</html>

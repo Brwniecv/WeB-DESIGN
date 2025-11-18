@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get and set DOM</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="site-title"><a href="index.html">Jquery</a></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <div class="container">
+    <h2>Get and set DOM</h2>
+
+    <script>
+      $(document).ready(function() {
+        
+        $("#btn1").click(function() {
+          $("#test1").text("This is the new text for this example");
+        });
+
+        $("#btn2").click(function() {
+          $("#test2").html("<b>This is the new HTML text</b>");
+        });
+
+        $("#btn3").click(function() {
+          $("#test3").val("This is the new value");
+        });
+
+      });
+    </script>
+
+    <p id="test1">dame da ne dame yu dame namo yo</p>
+    <p id="test2"><b>i tell you how i became the prince of</b></p>
+    <input type="text" id="test3">
+
+    <button id="btn1">Text</button>
+    <button id="btn2">HTML</button>
+    <button id="btn3">Input</button>
+
+    <pre><code>
+// Example JavaScript
+console.log("Header 8 page loaded!");
+    </code></pre>
+
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+  </div>
+
+</body>
+</html>

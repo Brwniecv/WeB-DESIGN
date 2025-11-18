@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animate</title>
+
+  <!-- ✅ Load jQuery before your custom script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .content-box {
+      width: 240px;
+      height: 60px;
+      background-color: blue;
+      padding: 20px;
+      cursor: pointer; /* show it's clickable */
+      transition: all 0.3s ease;
+      margin: 30px auto;
+      border-radius: 10px;
+    }
+
+    .content-before {
+      font-size: 22px;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+      line-height: 60px;
+    }
+
+    .content-after {
+      display: none;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: left;
+      line-height: 16px;
+      opacity: 0;
+    }
+
+    header a {
+      text-decoration: none;
+      color: black;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f3f3f3;
+    }
+
+    nav a {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="site-title"><a href="index.html">Jquery</a></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Animate</h2>
+
+    <!-- Clickable Blue Box -->
+    <div class="content-box">
+      <p class="content-before">Click me to see more!</p>
+      <p class="content-after">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the
+        1500s, when an unknown printer took a galley of type and scrambled it
+        to make a type specimen book. It has survived not only five centuries,
+        but also the leap into electronic typesetting, remaining essentially
+        unchanged. It was popularised in the 1960s with the release of Letraset
+        sheets containing Lorem Ipsum passages, and more recently with desktop
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+    </div>
+
+    <!-- ✅ jQuery Script -->
+    <script>
+      $(document).ready(function() {
+        $(".content-box").click(function() {
+          // Expand the box smoothly
+          $(this).animate({
+            width: '500px',
+            height: '+=200px'
+          }, 1000);
+
+          // Show hidden content with fade-in effect
+          $(this).find(".content-after").show().animate({
+            opacity: 1
+          }, 2000);
+        });
+      });
+    </script>
+
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+  </div>
+</body>
+</html>

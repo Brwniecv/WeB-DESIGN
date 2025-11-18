@@ -1,0 +1,9 @@
+my-website/
+│
+├── index.html          ← main home page
+├── blog.html           ← blog page
+├── page1.html          ← header 1’s page
+├── page2.html
+├── page3.html
+├── ... up to page10.html
+└── style.css           ← shared styling (optional)

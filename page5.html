@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Header 5 Page</title>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    .content-box {
+      width: 200px;
+      height: 100px;
+      background-color: #3498db;
+      color: white;
+      font-size: 18px;
+      text-align: center;
+      line-height: 100px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin: 40px auto;
+    }
+
+    .content-box:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="site-title"><a href="index.html">Jquery</a></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Header 5 Page</h2>
+
+    <pre><code>
+// Example JavaScript
+console.log("Header 5 page loaded!");
+    </code></pre>
+
+    <button>Click me to STOP animating.</button>
+
+    <div class="content-box">
+      click me to start animating.
+    </div>
+
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+  </div>
+
+  <!-- FIXED SCRIPT -->
+  <script>
+$(document).ready(function(){
+  $(".content-box").click(function() {
+    $(".content-box").animate({
+      width: "500px",
+      height: "400px"
+    }, 3000).animate({
+      fontSize: "24px"
+    }, 3000);
+  });
+
+  $("button").click(function() {
+    $(".content-box").stop(true, false); 
+  });
+});
+  </script>
+
+</body>
+</html>

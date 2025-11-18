@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Append</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="site-title"><a href="index.html">Jquery</a></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Append</h2>
+    
+<div id="container">
+      <p id="p-first">the first paragraph</p>
+      <p id="p-second">the second paragraph</p>
+      <p id="p-third">the third paragraph</p>
+
+</div>
+
+
+
+    <pre><code>
+// Example JavaScript
+console.log("Header 9 page loaded!");
+    </code></pre>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+    var createEle = document.createElement("p");
+    createEle.innnerHTML = "a new new paragraph";
+
+$("#container").append("<p>This is the new paragraph.</p>");
+
+
+
+  });
+  </script>
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+  </div>
+</body>
+</html>

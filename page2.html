@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events</title>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    #side-nav ul li a,
+    #side-nav ul li {
+      text-decoration: none;
+      list-style-type: none;
+    } 
+
+    nav {
+      width: 240px;
+      height: 40vh;
+      background-color: #000;
+      display: none; /* hidden by default */
+    }
+
+    #side-nav a,
+    #side-nav p {
+      color: #ffffff;
+      font-size: 20px;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      position: relative;
+      display: block;
+    }
+
+    #side-nav a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #F1C40F, #E74C3C);
+      border-radius: 0;
+      transition: all 0.5s ease-in-out;
+    }
+
+    #side-nav a:hover::before {
+      width: 100%;
+      border-radius: 50%;
+    } 
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="site-title"><a href="index.html">Jquery</a></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Hide</h2>
+
+    <!-- Menu Icon -->
+    <header>
+      <!-- ⚠️ Use a relative or web URL for the image — not a C:\ path -->
+      <img id="menu-toggle" src="menu.png" width="30" height="30" alt="Menu Icon" style="cursor:pointer;">
+    </header>
+
+    <!-- Side Navigation -->
+    <nav id="side-nav">
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">My Channel</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Subscriptions</a></li>
+      </ul>
+      <ul>
+        <li><p>LIBRARY</p></li>
+        <li><a href="#">History</a></li>
+        <li><a href="#">Watch Later</a></li>
+        <li><a href="#">Purchases</a></li>
+        <li><a href="#">jQuery</a></li>
+      </ul>
+    </nav>
+
+    <!-- jQuery Script -->
+    <script>
+      $(document).ready(function() {
+        // When the menu icon is clicked, toggle the side nav
+        $("#menu-toggle").click(function() {
+          $("#side-nav").slideToggle(500);
+        });
+      });
+    </script>
+
+    <!-- Example: You can write or test code here -->
+    <pre><code>
+// Example JavaScript
+console.log("events loaded!");
+    </code></pre>
+
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+  </div>
+</body>
+</html>
